@@ -7557,13 +7557,6 @@ While this is reasonable, it means that the cluster center itself may not be a v
 <li>Cluster centers are actual data points</li>
 <li>It only requires that we have pre-computed pairwise similarity between data points</li>
 </ul>
-<ol>
-<li>Give examples of cases where each of these advantages are desirable.</li>
-<li>Give examples of cases where each these advantages are NOT desirable.</li>
-</ol>
-<ul>
-<li>Write your answers here</li>
-</ul>
 </div>
 </div>
 </div>
@@ -7574,6 +7567,53 @@ While this is reasonable, it means that the cluster center itself may not be a v
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ol>
+<li>Give examples of cases where each of these advantages are desirable.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>ANSWER:</strong></p>
+<p><strong>Actual data points</strong></p>
+<p>In customer segmentation, where each data point represents an actual customer profile, having cluster centers as actual customers allows marketers to directly examine typical customers in each group. This approach provides real examples that can be used for tailored marketing strategies, as each center represents a real, actionable customer profile.</p>
+<p><strong>Only requires pre-computed pairwise similarity</strong></p>
+<p>In social network analysis, pairwise similarity can represent the connections or shared interests between individuals. Affinity Propagation can work with just this pairwise similarity data without needing the entire network structure, making it efficient for analyzing communities within large networks.</p>
+<p>Thus, these advantages may be desirable when we are looking to find an actual point to "represent" a sample, especially in text-based (or image-based) data where a number may not hold much meaning. It essentially serves the purpose of a "median" (which exists in a sample) as compared to a mean (which may not necessarily exist in a sample) and is much more easily interpretable. Additionally, it reduces run-time calculation, which may allow it to be more efficient, especially with larger datasets.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ol start="2">
+<li>Give examples of cases where each these advantages are NOT desirable.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Actual data points</strong></p>
+<p>In a geographic clustering scenario, such as grouping locations across a large area, the most representative location might not coincide with an actual place but rather a calculated central point between locations. Using actual data points as cluster centers may lead to suboptimal results because the chosen centers might not capture the true centrality or ideal representation of a region.</p>
+<p><strong>Only requires pre-computed pairwise similarity</strong></p>
+<p>In image clustering for visual similarity, relying only on pairwise similarity could ignore the broader distribution of visual features. For example, if the images form distinct clusters with varying degrees of similarity across the dataset, pairwise similarity alone may not capture these complex, high-dimensional relationships accurately, reducing clustering effectiveness.</p>
+<p>Thus, these advantages may be desirable when we are looking to find an actual point to "represent" a sample, especially in text-based (or image-based) data where a number may not hold much meaning. It essentially serves the purpose of a "median" (which exists in a sample) as compared to a mean (which may not necessarily exist in a sample) and is much more easily interpretable. Additionally, it reduces run-time calculation, which may allow it to be more efficient, especially with larger datasets.</p>
 </div>
 </div>
 </div>
@@ -7619,7 +7659,7 @@ This type of summarization where parts of a document are copied verbatim is call
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -7653,7 +7693,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"data/causes_of_world_war_I"</span><span class="p">)</span> <span class="k">as</span> <span class="n">fi</span><span class="p">:</span>
@@ -7668,7 +7708,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">sentences</span> <span class="o">=</span> <span class="p">[]</span>
@@ -7692,7 +7732,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># convert sentences using tfidf representation</span>
@@ -7730,7 +7770,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># print cluster centers using `ap.cluster_centers_indices_`</span>
@@ -7839,7 +7879,7 @@ Williamson, Jr., Samuel R.: The Way to War, in: 1914-1918-online.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Comment on results. what works, what doesn't work? is TFIDF better than BOW?</p>
+<h3 id="Comment-on-results.-what-works,-what-doesn't-work?-is-TFIDF-better-than-BOW?">Comment on results. what works, what doesn't work? is TFIDF better than BOW?<a class="anchor-link" href="#Comment-on-results.-what-works,-what-doesn't-work?-is-TFIDF-better-than-BOW?">¶</a></h3>
 </div>
 </div>
 </div>
@@ -7850,6 +7890,28 @@ Williamson, Jr., Samuel R.: The Way to War, in: 1914-1918-online.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>ANSWER:</strong>
+The TFIDF + Affinity Propagation approach works reasonably well for extractive summarization:</p>
+<p>Strengths:</p>
+<ul>
+<li>Identifies key sentences that represent distinct topics/themes in the document.</li>
+<li>Maintains original phrasing since it uses actual sentences</li>
+<li>TFIDF helps focus on important terms while downweighting common words</li>
+</ul>
+<p>Limitations:</p>
+<ul>
+<li>Redundancy and Omissions: Due to similar themes, redundancy may occur, and important details may be missed, especially if expressed in non-representative ways.</li>
+<li>MLimitations of Statistical Methods: TF-IDF cannot capture narrative flow and contextual relationships, and it does not account for semantic differences.</li>
+<li>Sparse Representation: In the case of a small corpus or the presence of many unique terms, this may lead to underutilization of information.</li>
+</ul>
+<p>TFIDF vs BOW:
+TFIDF is likely better than BOW for this task because:</p>
+<ul>
+<li>It accounts for term importance across the document</li>
+<li>Reduces impact of common but less meaningful words</li>
+<li>Helps identify truly distinctive sentences rather than just those with common terms
+TF-IDF is often better than BOW for tasks that require understanding the importance of terms within a document. The weighting system helps prioritize more relevant terms in the analysis. However, if the goal is to simply gather word counts without concern for their significance, BOW may be sufficient.</li>
+</ul>
 </div>
 </div>
 </div>
@@ -7914,7 +7976,7 @@ few labeled examples</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ok to restart</span>
@@ -7947,7 +8009,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">fetch_20newsgroups</span>
@@ -8098,7 +8160,7 @@ array([0, 1, 1, 1, 0, 1, 1, 0, 0, 0])
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">data_train</span> <span class="o">=</span> <span class="n">fetch_20newsgroups</span><span class="p">(</span><span class="n">remove</span><span class="o">=</span><span class="p">(</span><span class="s2">"headers"</span><span class="p">,</span> <span class="s2">"footers"</span><span class="p">,</span> <span class="s2">"quotes"</span><span class="p">),</span> <span class="n">subset</span><span class="o">=</span><span class="s2">"train"</span><span class="p">)</span>
@@ -8116,7 +8178,9 @@ array([0, 1, 1, 1, 0, 1, 1, 0, 0, 0])
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>What does the remove kwarg do in this function?</p>
-<p>ANSWER: The <code>remove</code> keyword argument in the <code>fetch_20newsgroups</code> function specifies which parts of the newsgroup posts should be removed. By setting <code>remove=("headers", "footers", "quotes")</code>, the function will remove the headers, footers, and quoted text from the newsgroup posts.</p>
+<p><strong>ANSWER</strong></p>
+<p>The <code>remove</code> keyword argument in the <code>fetch_20newsgroups</code> function specifies which parts of the newsgroup posts should be removed. By setting <code>remove=("headers", "footers", "quotes")</code>, the function will remove the headers, footers, and quoted text from the newsgroup posts.</p>
+<p>This helps clean the data by removing metadata and quoted text that isn't part of the actual content, allowing us to focus on just the main message content for classification. This is important since headers/footers/quotes could contain information that makes the classification task artificially easier.</p>
 </div>
 </div>
 </div>
@@ -8136,7 +8200,7 @@ array([0, 1, 1, 1, 0, 1, 1, 0, 0, 0])
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.dummy</span> <span class="kn">import</span> <span class="n">DummyClassifier</span>
@@ -8182,7 +8246,7 @@ array([0, 1, 1, 1, 0, 1, 1, 0, 0, 0])
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">num_training_examples</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data_train</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
@@ -8388,18 +8452,19 @@ array([0, 1, 1, 1, 0, 1, 1, 0, 0, 0])
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># your code here</span>
 <span class="n">all_train_data</span> <span class="o">=</span> <span class="n">data_train</span><span class="o">.</span><span class="n">data</span> <span class="o">+</span> <span class="n">extra_docs</span>
 
 <span class="n">vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">max_features</span><span class="o">=</span><span class="n">MAX_FEATURES</span><span class="p">)</span>
-<span class="n">X_train</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">all_train_data</span><span class="p">)</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">all_train_data</span><span class="p">[:</span><span class="n">NUM_LABELED_EXAMPLES</span><span class="p">])</span>
 <span class="n">X_test</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">data_test</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="n">y_train_subset</span> <span class="o">=</span> <span class="n">data_train</span><span class="o">.</span><span class="n">target</span><span class="p">[:</span><span class="n">NUM_LABELED_EXAMPLES</span><span class="p">]</span>
 
 <span class="n">lr</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
-<span class="n">lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">[:</span><span class="n">NUM_LABELED_EXAMPLES</span><span class="p">],</span> <span class="n">data_train</span><span class="o">.</span><span class="n">target</span><span class="p">[:</span><span class="n">NUM_LABELED_EXAMPLES</span><span class="p">])</span>
+<span class="n">lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train_subset</span><span class="p">)</span>
 
 <span class="c1"># lr.score(...)</span>
 <span class="n">accuracy</span> <span class="o">=</span> <span class="n">lr</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">data_test</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>
@@ -8416,7 +8481,7 @@ array([0, 1, 1, 1, 0, 1, 1, 0, 0, 0])
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Accuracy of logistic regression model with more unsupervised data: 0.4759691980881572
+<pre>Accuracy of logistic regression model with more unsupervised data: 0.44118428040361124
 </pre>
 </div>
 </div>
@@ -8429,7 +8494,25 @@ array([0, 1, 1, 1, 0, 1, 1, 0, 0, 0])
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Comment on the results:</p>
+<p><strong>Comment on the results:</strong></p>
+<p>Results of including both 20 newsgroups and IMDB data when fitting the TfidfVectorizer:</p>
+<p>Advantages:</p>
+<ul>
+<li>The vectorizer learns term importance from a larger, more diverse corpus</li>
+<li>Better estimates of IDF values since we see terms across more documents</li>
+<li>May handle domain-specific terms better by learning their relative importance</li>
+</ul>
+<p>Potential limitations:</p>
+<ul>
+<li>The two datasets have different styles/domains which could affect term weighting</li>
+<li>Using more data doesn't necessarily improve classification if the additional data is too different</li>
+</ul>
+<p>Comparison to Part 1:</p>
+<ul>
+<li>The accuracy is likely similar since we're still using the same 1000 labeled examples for training</li>
+<li>Main difference is in feature representation quality from better IDF estimates</li>
+<li>The larger corpus helps reduce impact of dataset-specific term frequencies</li>
+</ul>
 </div>
 </div>
 </div>
@@ -8467,7 +8550,7 @@ array([0, 1, 1, 1, 0, 1, 1, 0, 0, 0])
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -8518,7 +8601,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">train_token_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">get_tokens</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">train_sentences_list</span><span class="p">]</span>
@@ -8532,7 +8615,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">unigram_counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
@@ -8551,7 +8634,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span><span class="p">(</span><span class="n">n_unigrams</span> <span class="o">==</span> <span class="mi">95491</span><span class="p">)</span>
@@ -8565,7 +8648,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_unigram_token_prob</span><span class="p">(</span><span class="n">token</span><span class="p">):</span>
@@ -8588,7 +8671,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span><span class="p">(</span><span class="n">get_unigram_token_prob</span><span class="p">(</span><span class="s1">'apple'</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.00046</span><span class="p">)</span>
@@ -8605,7 +8688,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Note-that-we-haven't-yet-introduced-any-smoothing,-meaning,-out-of-vocabulary-words-will-have-a-probability-of-0:">Note that we haven't yet introduced any smoothing, meaning, out-of-vocabulary words will have a probability of 0:<a class="anchor-link" href="#Note-that-we-haven't-yet-introduced-any-smoothing,-meaning,-out-of-vocabulary-words-will-have-a-probability-of-0:">¶</a></h3>
+<p>Note that we haven't yet introduced any smoothing, meaning, out-of-vocabulary words will have a probability of 0:</p>
 </div>
 </div>
 </div>
@@ -8614,7 +8697,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">get_text_prob_unigram</span><span class="p">(</span><span class="s2">"onomatopoeia"</span><span class="p">)</span>
@@ -8630,13 +8713,13 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>/var/folders/tl/1_9jjfjj3wb0nqls4mbmjchw0000gn/T/ipykernel_33440/2807505600.py:9: RuntimeWarning: divide by zero encountered in log
+<pre>/var/folders/tl/1_9jjfjj3wb0nqls4mbmjchw0000gn/T/ipykernel_4169/2807505600.py:9: RuntimeWarning: divide by zero encountered in log
   logp += np.log(get_unigram_token_prob(t))
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>0.0</pre>
 </div>
@@ -8671,7 +8754,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">rare_tokens</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
@@ -8704,7 +8787,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">rare_tokens</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4859</span><span class="p">)</span>
@@ -8731,7 +8814,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Next,-let's-create-a-new-counter-filtered_unigram_counts-where-every-token-that-appears-in-rare_tokens-is-recorded-as-the-special-token-%3Cunk%3E">Next, let's create a new counter <code>filtered_unigram_counts</code> where every token that appears in <code>rare_tokens</code> is recorded as the special token <code>&lt;unk&gt;</code><a class="anchor-link" href="#Next,-let's-create-a-new-counter-filtered_unigram_counts-where-every-token-that-appears-in-rare_tokens-is-recorded-as-the-special-token-%3Cunk%3E">¶</a></h3>
+<p>Next, let's create a new counter <code>filtered_unigram_counts</code> where every token that appears in <code>rare_tokens</code> is recorded as the special token <code>&lt;unk&gt;</code></p>
 </div>
 </div>
 </div>
@@ -8740,7 +8823,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">filtered_unigram_counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">({</span><span class="s1">'&lt;unk&gt;'</span><span class="p">:</span> <span class="mi">0</span><span class="p">})</span>
@@ -8762,7 +8845,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span><span class="p">(</span><span class="n">filtered_unigram_counts</span><span class="p">[</span><span class="s1">'&lt;unk&gt;'</span><span class="p">]</span> <span class="o">==</span> <span class="mi">4859</span><span class="p">)</span>
@@ -8789,7 +8872,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="To-use-these-new-counts,-let's-modify-our-text-probability-function">To use these new counts, let's modify our text probability function<a class="anchor-link" href="#To-use-these-new-counts,-let's-modify-our-text-probability-function">¶</a></h3>
+<p>To use these new counts, let's modify our text probability function</p>
 </div>
 </div>
 </div>
@@ -8798,7 +8881,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_filtered_unigram_token_prob</span><span class="p">(</span><span class="n">token</span><span class="p">):</span>
@@ -8821,12 +8904,12 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [41]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span><span class="p">(</span><span class="n">get_filtered_unigram_token_prob</span><span class="p">(</span><span class="s1">'apple'</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.00046</span><span class="p">)</span>
 <span class="k">assert</span><span class="p">(</span><span class="n">get_text_prob_filtered_unigram</span><span class="p">(</span><span class="s1">'the company'</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span> <span class="o">==</span> <span class="mf">2.455e-06</span><span class="p">)</span>
-<span class="c1">#assert(get_text_prob_filtered_unigram("onomatopoeia").round(5) == 0.00016)</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">get_text_prob_filtered_unigram</span><span class="p">(</span><span class="s2">"onomatopoeia"</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.00016</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8839,7 +8922,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="We-can-see-that-now-unknown-words-actually-have-a-probability-higher-than-some-of-the-rare-words-that-we-have-already-seen-before-like-apple.">We can see that now unknown words actually have a probability higher than some of the rare words that we have already seen before like <code>apple</code>.<a class="anchor-link" href="#We-can-see-that-now-unknown-words-actually-have-a-probability-higher-than-some-of-the-rare-words-that-we-have-already-seen-before-like-apple.">¶</a></h3>
+<p>We can see that now unknown words actually have a probability higher than some of the rare words that we have already seen before like <code>apple</code>.</p>
 </div>
 </div>
 </div>
@@ -8850,7 +8933,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="The-choice-of-count-1-to-label-words-as-%3Cunk%3Ewas-arbitrary.-How-could-we-tune-this-if-we-had-more-time?">The choice of count 1 to label words as <code>&lt;unk&gt;</code>was arbitrary. How could we tune this if we had more time?<a class="anchor-link" href="#The-choice-of-count-1-to-label-words-as-%3Cunk%3Ewas-arbitrary.-How-could-we-tune-this-if-we-had-more-time?">¶</a></h3>
+<p>The choice of count 1 to label words as <code>&lt;unk&gt;</code>was arbitrary. How could we tune this if we had more time?</p>
 </div>
 </div>
 </div>
@@ -8861,7 +8944,18 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>ANSWER:</p>
+<p><strong>ANSWER:</strong>
+We could tune the <unk> threshold in several ways:</unk></p>
+<ol>
+<li><p>Cross-validation: Split the training data into folds and evaluate model perplexity using different count thresholds (e.g. 1, 2, 3, 5, 10). Choose the threshold that gives best performance on validation data.</p>
+</li>
+<li><p>Development set: Hold out a portion of training data as dev set. Try different thresholds and measure impact on text probability/perplexity on dev set.</p>
+</li>
+<li><p>Task-specific optimization: If using language model as part of downstream task(e.g. text classification),tune threshold to maximize performance on that task.</p>
+</li>
+<li><p>Identify Rare Unigrams: Set a threshold (e.g., words occurring fewer than 5 times) to identify rare unigrams, which will be replaced with <unk>.</unk></p>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -8883,7 +8977,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Let's-expand-our-model-to-bigrams-now.-Make-sure-to-check-if-each-component-in-a-bigram-exists-and-label-it-as-%3Cunk%3E-if-needed.">Let's expand our model to bigrams now. Make sure to check if each component in a bigram exists and label it as <code>&lt;unk&gt;</code> if needed.<a class="anchor-link" href="#Let's-expand-our-model-to-bigrams-now.-Make-sure-to-check-if-each-component-in-a-bigram-exists-and-label-it-as-%3Cunk%3E-if-needed.">¶</a></h3>
+<p>Let's expand our model to bigrams now. Make sure to check if each component in a bigram exists and label it as <code>&lt;unk&gt;</code> if needed.</p>
 </div>
 </div>
 </div>
@@ -8892,7 +8986,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [42]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">filtered_bigram_counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
@@ -8921,7 +9015,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span><span class="p">(</span><span class="n">get_text_prob_filtered_bigram</span><span class="p">(</span><span class="s1">'the company'</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.00148</span><span class="p">)</span>
@@ -8937,7 +9031,8 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="We-correctly-get-a-higher-probabiliy-for-the-company,-now-that-we-are-respecting-bigrams.">We correctly get a higher probabiliy for <code>the company</code>, now that we are respecting bigrams.<a class="anchor-link" href="#We-correctly-get-a-higher-probabiliy-for-the-company,-now-that-we-are-respecting-bigrams.">¶</a></h3><h3 id="However:">However:<a class="anchor-link" href="#However:">¶</a></h3>
+<p>We correctly get a higher probabiliy for <code>the company</code>, now that we are respecting bigrams.
+However:</p>
 </div>
 </div>
 </div>
@@ -8946,7 +9041,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">get_text_prob_filtered_bigram</span><span class="p">(</span><span class="s1">'company the'</span><span class="p">)</span>
@@ -8962,13 +9057,13 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>/var/folders/tl/1_9jjfjj3wb0nqls4mbmjchw0000gn/T/ipykernel_33440/18299096.py:15: RuntimeWarning: divide by zero encountered in log
+<pre>/var/folders/tl/1_9jjfjj3wb0nqls4mbmjchw0000gn/T/ipykernel_4169/18299096.py:15: RuntimeWarning: divide by zero encountered in log
   logp += np.log(get_filtered_bigram_token_prob(t1, t2))
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[44]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[33]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>0.0</pre>
 </div>
@@ -8982,7 +9077,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="We-can-see-that-we-still-get-0-for-unknown-bigrams.-Let's-fix-this-via-Backoff.-To-reiterate:-the-idea-is-to-default-to-unigram-probabilities-if-the-bigram-is-unknown.">We can see that we still get 0 for unknown bigrams. Let's fix this via Backoff. To reiterate: the idea is to default to unigram probabilities if the bigram is unknown.<a class="anchor-link" href="#We-can-see-that-we-still-get-0-for-unknown-bigrams.-Let's-fix-this-via-Backoff.-To-reiterate:-the-idea-is-to-default-to-unigram-probabilities-if-the-bigram-is-unknown.">¶</a></h3>
+<p>We can see that we still get 0 for unknown bigrams. Let's fix this via Backoff. To reiterate: the idea is to default to unigram probabilities if the bigram is unknown.</p>
 </div>
 </div>
 </div>
@@ -8991,7 +9086,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_backoff_bigram_token_prob</span><span class="p">(</span><span class="n">token1</span><span class="p">,</span> <span class="n">token2</span><span class="p">):</span>
@@ -9010,7 +9105,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_text_prob_backoff_bigram</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
@@ -9029,7 +9124,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [47]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span><span class="p">(</span><span class="n">get_text_prob_backoff_bigram</span><span class="p">(</span><span class="s1">'company the'</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="o">==</span> <span class="mf">1.1e-07</span><span class="p">)</span>
@@ -9045,7 +9140,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="We-can-happily-now-estimate-any-input-text-we-can-think-of-with-running-into-issues-with-0.">We can happily now estimate any input text we can think of with running into issues with 0.<a class="anchor-link" href="#We-can-happily-now-estimate-any-input-text-we-can-think-of-with-running-into-issues-with-0.">¶</a></h3>
+<p>We can happily now estimate any input text we can think of with running into issues with 0.</p>
 </div>
 </div>
 </div>
@@ -9067,7 +9162,9 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Let's-see-if-this-was-all-worth-it.-Let's-evaluate-perplexity.">Let's see if this was all worth it. Let's evaluate perplexity.<a class="anchor-link" href="#Let's-see-if-this-was-all-worth-it.-Let's-evaluate-perplexity.">¶</a></h3><h3 id="Specifically-compare-the-perplexity-of-our-filtered-unigram-model-get_filtered_unigram_token_prob-to-our-new-and-improved-backoff-bigram-model-get_backoff_bigram_token_prob">Specifically compare the perplexity of our filtered unigram model <code>get_filtered_unigram_token_prob</code> to our new and improved backoff bigram model <code>get_backoff_bigram_token_prob</code><a class="anchor-link" href="#Specifically-compare-the-perplexity-of-our-filtered-unigram-model-get_filtered_unigram_token_prob-to-our-new-and-improved-backoff-bigram-model-get_backoff_bigram_token_prob">¶</a></h3><h3 id="Note:-For-easy-comparison-let's-only-evaluate-tokens%5B1:%5D-for-both-models-such-that-even-the-first-token-can-already-form-a-correct-bigram">Note: For easy comparison let's only evaluate <code>tokens[1:]</code> for both models such that even the first token can already form a correct bigram<a class="anchor-link" href="#Note:-For-easy-comparison-let's-only-evaluate-tokens%5B1:%5D-for-both-models-such-that-even-the-first-token-can-already-form-a-correct-bigram">¶</a></h3>
+<p>Let's see if this was all worth it. Let's evaluate perplexity.
+Specifically compare the perplexity of our filtered unigram model <code>get_filtered_unigram_token_prob</code> to our new and improved backoff bigram model <code>get_backoff_bigram_token_prob</code></p>
+<p>Note: For easy comparison let's only evaluate <code>tokens[1:]</code> for both models such that even the first token can already form a correct bigram</p>
 </div>
 </div>
 </div>
@@ -9076,7 +9173,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_text_ppl_filtered_unigram</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
@@ -9104,7 +9201,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">ppl_list</span> <span class="o">=</span> <span class="p">[]</span>
@@ -9121,7 +9218,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [50]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">ppl_list</span> <span class="o">=</span> <span class="p">[]</span>
@@ -9138,7 +9235,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span><span class="p">(</span><span class="n">model_bigram_ppl</span> <span class="o">&lt;</span> <span class="n">model_unigram_ppl</span><span class="p">)</span>
@@ -9154,7 +9251,45 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Seems-like-it-worked-very-well.-Try-to-find-one-or-two-examples-of-short-strings-that-clearly-show-that-our-bigram-model-is-better-and-why.-(Short-answer-is-OK-here)">Seems like it worked very well. Try to find one or two examples of short strings that clearly show that our bigram model is better and why. (Short answer is OK here)<a class="anchor-link" href="#Seems-like-it-worked-very-well.-Try-to-find-one-or-two-examples-of-short-strings-that-clearly-show-that-our-bigram-model-is-better-and-why.-(Short-answer-is-OK-here)">¶</a></h3>
+<p>Seems like it worked very well. Try to find one or two examples of short strings that clearly show that our bigram model is better and why. (Short answer is OK here)</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [42]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Example 1: the cat sat"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Unigram perplexity:"</span><span class="p">,</span> <span class="n">get_text_ppl_filtered_unigram</span><span class="p">(</span><span class="s2">"the cat sat"</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Bigram perplexity:"</span><span class="p">,</span> <span class="n">get_text_ppl_backoff_bigram</span><span class="p">(</span><span class="s2">"the cat sat"</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Example 2: new york city"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Unigram perplexity:"</span><span class="p">,</span> <span class="n">get_text_ppl_filtered_unigram</span><span class="p">(</span><span class="s2">"new york city"</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Bigram perplexity:"</span><span class="p">,</span> <span class="n">get_text_ppl_backoff_bigram</span><span class="p">(</span><span class="s2">"new york city"</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Example 1: the cat sat
+Unigram perplexity: 19.75026478224891
+Bigram perplexity: 10.055457118325274
+Example 2: new york city
+Unigram perplexity: 227.60960948584065
+Bigram perplexity: 13.078937559455577
+</pre>
+</div>
 </div>
 </div>
 </div>
@@ -9165,7 +9300,10 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>ANSWER:</p>
+<p><strong>ANSWER</strong></p>
+<p>Example 1:The bigram model performs better because it captures common word sequences like 'the cat' .</p>
+<p>Example 2:The bigram model performs much better here because it learns common phrases like 'new york',
+The unigram model treats each word independently, missing these important word associations.</p>
 </div>
 </div>
 </div>
